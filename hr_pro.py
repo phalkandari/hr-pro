@@ -71,13 +71,15 @@ def asking_for_user_option():
 def show_employees():
     print("Employees")
     print(" ")
-    print (employee_list)
+    for empo in employee_list:
+        print (empo)
 
 #The Function 2
 def show_managers():
     print("Managers")
     print(" ")
-    print (manager_list)
+    for mano in manager_list:
+        print (mano)
     
 #The Function 3
 def add_an_employee(employee_list):
@@ -118,5 +120,3 @@ def main():
 
 if __name__ == '__main__':
 	main()
-
-print (employee_one)

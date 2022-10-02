@@ -55,7 +55,6 @@ manager_list = [manager_one]
 
 #The Function asking the user to choose an option
 def asking_for_user_option():
-    show_options(option)
     option = int(input("What would you like to do? "))
     if option == 1:
         show_employees()
@@ -70,10 +69,14 @@ def asking_for_user_option():
 
 #The Function 1
 def show_employees():
+    print("Employees")
+    print(" ")
     print (employee_list)
 
 #The Function 2
 def show_managers():
+    print("Managers")
+    print(" ")
     print (manager_list)
     
 #The Function 3
@@ -84,7 +87,7 @@ def add_an_employee(employee_list):
     employment_years = int(input("Employment years: "))
     added_employee = Employee(name, age, salary, employment_years)
     employee_list.append(added_employee)
-    print("Emplyee added successfully")
+    print("Employee added successfully")
     print(added_employee)
     return employee_list
 
@@ -108,11 +111,10 @@ def Exit():
 
 
 def main():
-    print(
-        "Welcome to HR Pro"
-        "Options:"
-    )
-    options = get_options()
+    print("Welcome to HR Pro")
+    print("Options:")
+    show_options(get_options())
+    asking_for_user_option()
 
-# if __name__ == '__main__':
-# 	main()
+if __name__ == '__main__':
+	main()

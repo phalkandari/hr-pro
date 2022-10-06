@@ -31,9 +31,7 @@ class Manager(Employee):
         return self.bonus_percentage * self.salary
 
 
-def main():
-    employees_list = []
-    managers_list = []
+def print_options():
     print('''Options:
           1. Show Employees
           2. Show Managers
@@ -41,6 +39,12 @@ def main():
           4. Add A Manager
           5. Exit''')
 
+
+def main():
+    employees_list = []
+    managers_list = []
+
+    print_options()
     choice = int(input("What would you like to do? "))
     while choice != 5:
         if choice == 1:
@@ -71,6 +75,7 @@ def main():
             print(added_manager)
         else:
             print("Invalid input!")
+        print_options()
         choice = int(input("What would you like to do? "))
 
 

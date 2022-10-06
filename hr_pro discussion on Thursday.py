@@ -42,35 +42,36 @@ def main():
           5. Exit''')
 
     choice = int(input("What would you like to do? "))
-
-    if choice == 1:
-        for employee in employees_list:
-            print(employee)
-    elif choice == 2:
-        for manager in managers_list:
-            print(manager)
-    elif choice == 3:
-        name = input("Name: ")
-        age = int(input("Age: "))
-        salary = int(input("Salary: "))
-        employment_years = int(input("Employment years: "))
-        added_employee = Employee(name, age, salary, employment_years)
-        employees_list.append(added_employee)
-        print("Employee added successfully")
-        print(added_employee)
-    elif choice == 4:
-        name = input("Name: ")
-        age = int(input("Age: "))
-        salary = int(input("Salary: "))
-        employment_years = int(input("Employment years: "))
-        bonus_percentage = float(input("Bonus Percentage: "))
-        added_manager = Manager(
-            name, age, salary, employment_years, bonus_percentage)
-        managers_list.append(added_manager)
-        print("Manager added successfully")
-        print(added_manager)
-    else:
-        print("Invalid input!")
+    while choice != 5:
+        if choice == 1:
+            for employee in employees_list:
+                print(employee)
+        elif choice == 2:
+            for manager in managers_list:
+                print(manager)
+        elif choice == 3:
+            name = input("Name: ")
+            age = int(input("Age: "))
+            salary = int(input("Salary: "))
+            employment_years = int(input("Employment years: "))
+            added_employee = Employee(name, age, salary, employment_years)
+            employees_list.append(added_employee)
+            print("Employee added successfully")
+            print(added_employee)
+        elif choice == 4:
+            name = input("Name: ")
+            age = int(input("Age: "))
+            salary = int(input("Salary: "))
+            employment_years = int(input("Employment years: "))
+            bonus_percentage = float(input("Bonus Percentage: "))
+            added_manager = Manager(
+                name, age, salary, employment_years, bonus_percentage)
+            managers_list.append(added_manager)
+            print("Manager added successfully")
+            print(added_manager)
+        else:
+            print("Invalid input!")
+        choice = int(input("What would you like to do? "))
 
 
 if __name__ == '__main__':
